@@ -1,0 +1,30 @@
+name: Sync from EC2 and GitHub to S3
+on:
+  push:
+    branches:[main]
+jobs:
+  deploy: 
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+      uses: actions/checkout@v4
+
+      -name: Setup AWS CLI
+      uses: aws-actions/configure-aws-credentials@v4
+      with:
+        aws-access-key-id: ${{ secrets.AWS.ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: ${{ secrets.AWS_REGION }}
+
+      # Option 1: Sync from EC2 to S3
+      -name: SSH into EC2 and upload to S3
+      run:
+          mkdir -p /tmp/deploy
+          scp -i /path/to/your/EC2_KEY ec2-user@${{ secrets.EC2_HOST }}:/path/to/your/files/* /tmp/deploy/
+          aws s3 sync /tmp/deploy s3://${{ secrets.S3_BUCKET_NAME }} --region ${{ secrets.AWS_REGION }}
+
+      # Option 2: Sync from GitHub to S3
+      -name: Upload GitHub files to S3
+      run:
+          aws s3 sync ./ s3://${{ secrets.S3_BUCKET_NAME }} --region ${{ secrets.AWS_REGION }}
