@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content= "width=device-width, initial-scale=1.0">
+        <title> Patient Intake Form </title>
+        <link rel="stylesheet" href="stylesheet.css">
+
+    </head>
+    <body>
+        <div class="wrapper">
+        <h1> Patient Intake Form </h1>
+        <form>
+            <div class="info-box">
+
+            <label for="FirstName">First Name</label>
+            <input type="text" id="FirstName" required>
+
+            <label for="LastName">Last Name</label>
+            <input type="text" id="LastName" required>
+
+            <label for="Email">Email</label>
+            <input type="email" id="Email" required>
+
+            <label for="idnumber">ID Number</label>
+            <input type="text" id="IDNumber" required>
+
+            </div>
+
+            <!-- PATIENT INFORMATION -->
+        <div class="form-section">
+
+            <h2>Patient Information</h2>
+
+            <div class="info-box">
+
+                <label for="PatientFirstName">
+                    Patient First Name
+                </label>
+                <input type="text" id="PatientFirstName" required>
+
+                <label for="PatientLastName">
+                    Patient Last Name
+                </label>
+                <input type="text" id="PatientLastName" required>
+
+                <label for="PatientBirthdate">
+                    Patient Birthdate
+                </label>
+                <input type="date" id="PatientBirthdate" required>
+
+            </div>
+
+        </div>
+
+        <!-- MEDICAL DETAILS -->
+        <div class="form-section">
+
+            <h2>Medical Details</h2>
+
+            <div class="info-box">
+
+                <label for="PatientGCS">
+                    Patient GCS
+                </label>
+                <input type="text" id="PatientGCS" required>
+
+                <label for="PatientInjurySeverity">
+                    Injury Severity
+                </label>
+                <input type="text" id="PatientInjurySeverity" required>
+
+                <label for="MedicalNotes">
+                    Medical Notes
+                </label>
+                <textarea id="MedicalNotes" rows="5"></textarea>
+
+            </div>
+
+        </div>
+
+        <!-- EMERGENCY CONTACT -->
+        <div class="form-section">
+
+            <h2>Emergency Contact</h2>
+
+            <div class="info-box">
+
+                <label for="EmergencyName">
+                    Contact Name
+                </label>
+                <input type="text" id="EmergencyName">
+
+                <label for="EmergencyPhone">
+                    Contact Phone
+                </label>
+                <input type="tel" id="EmergencyPhone">
+
+            </div>
+            
+            <button type="submit" class="btn">Submit Form</button>
+            </div>
+
+        </form>
+        <div class="back-button"> 
+            <a href="dashboard.html" class="back-btn"> Back</a> 
+
+        </div>
+    </div>
+    </body>
+</html>
+

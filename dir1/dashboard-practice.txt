@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dashboard</title>
+
+        <link rel="stylesheet" href="stylesheet.css">
+    </head>
+    <body>
+
+	<div class="grid-container">
+		<header class= "header"></header>
+		<aside id="sidebar">
+        		<div class="wrappertitle"><h1> Dashboard </h1></div>
+        
+     			<ul class="navbar">
+        			<li><a href="patientintake.html">Patient 						Intake</a></li>
+        			<li><a href="#"> Reports</a></li>
+       				<li><a href="profile.html">Profile</a></li>
+				<li><a href="#"> Settings </a></li>
+        			<li><a href="userinterface.html">Logout</a></li>
+		
+        
+     			</ul> 
+		</aside>
+		<main class= "main-container">
+	  
+        		<div class="recentreports">
+				<h4> Uploaded Reports </h4> 						</div>
+		</main>
+
+        <div class:"connectionstatus"><h4>Connection: </h4></div>
+    </body>
+</html>
