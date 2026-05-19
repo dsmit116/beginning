@@ -13,7 +13,7 @@
         		<div class="wrappertitle"><h1> Dashboard </h1></div>
         
      			<ul class="navbar">
-        			<li><a href="patientintake.html">Patient 						Intake</a></li>
+        			<li><a href="patientintake.html">Patient Intake</a></li>
         			<li><a href="#"> Reports</a></li>
        				<li><a href="profile.html">Profile</a></li>
 				<li><a href="#"> Settings </a></li>
