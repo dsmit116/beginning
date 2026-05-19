@@ -1,4 +1,5 @@
 Patient Care Record (PCR) Logic System
+
 This repository hosts a web-based Patient Care Record system designed to streamline clinical intake and neurological assessment. The application provides a secure interface for healthcare providers to capture patient demographics and automatically calculate the Glasgow Coma Scale (GCS) to categorize injury severity.
 
 Features
